@@ -1,0 +1,167 @@
+.wrapper {
+    background-color: white;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#container {
+    position: relative;
+    min-height: 100%;
+}
+    
+.header {
+      background-color: #003c88;
+      display: flex;
+      justify-content: flex-end;
+       position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+}
+
+.user_nav.grid-6 {   
+    margin: 10px 80px 10px 0;
+}
+
+.post {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  cursor        : pointer;     
+  border        : none;    
+  text-decoration: none;
+  margin-left  :20px;
+}
+
+.footer {
+     display: flex;
+     justify-content: space-between;
+     background-color: #003c88;
+     text-align: center;
+     font-size: 15pt;
+     color: white; 
+     width: 100%;
+     padding: 20px;
+     bottom: 0;
+}
+
+.kanri {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  cursor        : pointer;     
+  border        : none;    
+  text-decoration: none;
+  margin-right: 30px;
+}
+    
+p.admin {
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:570px;
+}
+    
+.image {
+    height: 300px;
+    width: 100%;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.albaito {
+    color: white;
+    font-size: 40px;
+    padding-top: 230px;
+    margin-left: 30px;
+}
+
+.contents.row {
+    width: 1100px;
+    margin: 80px auto 80px auto;
+    
+}
+    
+.allrow {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    margin-bottom:30px;
+}
+    
+.content_post {
+    padding: 30px 25px;
+}
+
+.icons {
+    margin-bottom: 30px;
+}
+
+.name {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */   
+  border        : none;    
+  margin-left  :10px;
+}
+
+
+
+.school {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 30pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : red;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */   
+  border        : none;    
+  margin-left  :10px;
+}
+
+.bikou {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */   
+  border        : none;  
+  margin-top: 20px;
+  margin-left  :10px;
+}
+
+.oubo {
+  display       : inline-block;
+  height: 120px;
+  width: 120px;
+  line-height: 120px;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  padding: 0 10px;
+  margin: auto 50px;
+  text-align    : center;      /* 文字位置   */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  border        : none;   
+  text-decoration: none;
+}
+    

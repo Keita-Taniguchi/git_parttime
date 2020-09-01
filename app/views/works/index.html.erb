@@ -1,0 +1,32 @@
+<div id= "main">
+ <div class = "image">
+  <div class = "albaito">
+   <p>アルバイト情報</p>
+  </div>
+ </div>
+ 
+<div class="contents row" >
+  <% @works.each do |work| %>
+  <div class = "allrow"> 
+    <div class="content_post">
+     <div class="icons">
+      <span class="name"><%= work.work_type %></span>
+      <span class="name"><%= I18n.l(work.start, format: :full_date) %> ~ <%= work.end.strftime("%H時%M分") %></span>
+      <% if work.teiinn %>
+       <span class="name">定員<%= work.teiinn %>名</span>
+      <% end %>
+     </div>
+     <div class="kyaku">
+      <span class="school"><%= work.school %> <%= work.gakunen %>年生 <%=work.ninzu %>名</span>
+     </div>
+     <% if work.bikou %>
+     <div>
+       <p class="bikou"><%= work.bikou %></p>
+     </div>
+     <% end %>
+    </div>
+     <a class="oubo" href="/tweets/new">投稿する</a>
+   </div>
+   <% end %>
+</div>
+</div>
