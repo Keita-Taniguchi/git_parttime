@@ -9,31 +9,17 @@
     
 .header {
       background-color: #003c88;
+      height: 60px;
       display: flex;
       justify-content: flex-end;
-       position: fixed;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
 }
 
 .user_nav.grid-6 {   
-    margin: 10px 80px 10px 0;
-}
-
-.post {
-  display       : inline-block;
-  border-radius : 5%;          /* 角丸       */
-  font-size     : 15pt;        /* 文字サイズ */
-  text-align    : center;      /* 文字位置   */
-  padding       : 12px 30px;   /* 余白       */
-  background    : black;     /* 背景色     */
-  color         : white;     /* 文字色     */
-  line-height   : 1em;         /* 1行の高さ  */
-  cursor        : pointer;     
-  border        : none;    
-  text-decoration: none;
-  margin-left  :20px;
+    margin: 10px 10px 10px 0;
 }
 
 .footer {
@@ -164,11 +150,41 @@ p.admin {
   text-decoration: none;
 }
 
+.ouboxx {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oubox {
+  display       : inline-block;
+  height: 70px;
+  width: 120px;
+  line-height: 70px;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  padding: 0 10px;
+  margin-right: 50px;
+  text-align    : center;      /* 文字位置   */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  border        : none;   
+  text-decoration: none;
+}
+
+.oubox.neo{
+    margin-top:20px;
+}
+    
 .touroku {
     width: 500px;
     margin: 80px auto 80px auto;
     background-color: gray;
     padding: 20px 20px;
+}
+
+.touroku.next{
+    text-align    : center;    
 }
 
 .label {
@@ -195,6 +211,21 @@ p.admin {
     resize: none;
 }
 
+.post {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  cursor        : pointer;     
+  border        : none;    
+  text-decoration: none;
+  margin-right :50px;
+}
+
 .postx {
   display       : inline-block;
   border-radius : 5%;          /* 角丸       */
@@ -208,4 +239,18 @@ p.admin {
   border        : none;    
   text-decoration: none;
   margin-left:200px;
+}
+
+.postxx {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  cursor        : pointer;     
+  border        : none;    
+  text-decoration: none;
 }

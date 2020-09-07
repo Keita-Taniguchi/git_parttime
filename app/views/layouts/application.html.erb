@@ -14,9 +14,16 @@
   <div id="container">
    <header class="header">
     <div class="header__bar row">
+    <% if admin_signed_in? %>
      <div class="user_nav grid-6">
-      <a class="post" href="/works/new">新規登録</a>
+     <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "post" %>
+     <%= link_to "バイト登録", "/works/new", class: "post" %>
      </div>
+     <% else %>
+     <div class="user_nav grid-6">
+    
+     </div>
+     <% end %>
     </div>
    </header>
   </div>
@@ -27,7 +34,7 @@
       <p class="admin">
         成蹊大学アドミッションセンター
       </p>
-      <a class="kanri" href="/tweets/new">投稿する</a>
+     <%= link_to "管理者用", new_admin_session_path, class: "post" %>
     </footer>
   </body>
 </html>

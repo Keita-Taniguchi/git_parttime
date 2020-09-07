@@ -1,0 +1,31 @@
+<div id= "main">
+ <div class = "image">
+  <div class = "albaito">
+   <p>管理者ログイン</p>
+  </div>
+ </div>
+
+<div class = "touroku next">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div style="margin: 0 auto 20px ">
+    <%= f.label :email, class: "label"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "boxx" %>
+  </div>
+
+  <div style="margin: 0 auto 20px">
+    <%= f.label :password, class: "label"%><br />
+    <%= f.password_field :password, autocomplete: "current-password",class: "boxx"%>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div style="margin: 0 auto 20px">
+      <%= f.check_box :remember_me %>
+      <%= f.label :"記憶する" %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン",class: "postxx" %>
+  </div>
+<% end %>
+</div>

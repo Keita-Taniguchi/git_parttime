@@ -19,14 +19,28 @@
      <div class="kyaku">
       <span class="school"><%= work.school %> <%= work.gakunen %>年生 <%=work.ninzu %>名</span>
      </div>
-     <% if work.bikou %>
+     <% if work.bikou.present? %>
      <div>
        <p class="bikou"><%= work.bikou %></p>
      </div>
      <% end %>
     </div>
+    <% if admin_signed_in? %>
+    <div class="ouboxx">
+     <div>
+      <div>
+      <%= link_to '削除', "/works/#{work.id}", method: :delete, class: "oubox" %>
+      </div>
+      <div>
+      <%= link_to '編集', "/works/#{work.id}/edit", method: :get, class: "oubox neo" %>
+      </div> 
+     </div>
+    </div>
+    <% else %>
      <a class="oubo" href="/tweets/new">投稿する</a>
+    <% end %>
    </div>
    <% end %>
+   <%= paginate(@works) %>
 </div>
 </div>
