@@ -37,6 +37,6 @@ class WorksController < ApplicationController
     end
  
     def move_to_index
-         redirect_to action: :index unless admin_signed_in?
+         redirect_to action: :index unless admin_signed_in? 
     end 
 end  

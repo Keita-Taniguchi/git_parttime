@@ -1,7 +1,11 @@
 <div id= "main">
  <div class = "image">
   <div class = "albaito">
+  <% if request.path.include?("student") %>
+   <p>ログイン</p>
+   <% else %>
    <p>管理者ログイン</p>
+  <% end %>
   </div>
  </div>
 
@@ -28,4 +32,6 @@
     <%= f.submit "ログイン",class: "postxx" %>
   </div>
 <% end %>
+<%= link_to "戻る", "/works"%>
 </div>
+

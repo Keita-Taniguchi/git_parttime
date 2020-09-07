@@ -36,8 +36,10 @@
       </div> 
      </div>
     </div>
-    <% else %>
+    <% elsif student_signed_in? %>
      <a class="oubo" href="/tweets/new">投稿する</a>
+    <% else %>
+    
     <% end %>
    </div>
    <% end %>

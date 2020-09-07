@@ -1,29 +1,37 @@
-<h2>Sign up</h2>
+<div id= "main">
+ <div class = "image">
+  <div class = "albaito">
+   <p>新規登録</p>
+  </div>
+ </div>
 
+<div class = "touroku next">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div style="margin: 0 auto 20px ">
+    <%= f.label :email, class: "label"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "boxx" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div style="margin: 0 auto 20px">
+    <%= f.label :password, class: "label"%><br />
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password",class: "boxx" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div style="margin: 0 auto 20px">
+    <%= f.label :password_confirmation, class: "label" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "boxx" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "登録", class: "postxx" %>
   </div>
 <% end %>
+<%= link_to "戻る", "/works"%>
+</div>
 
-<%= render "devise/shared/links" %>
+

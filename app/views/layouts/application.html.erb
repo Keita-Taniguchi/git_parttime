@@ -19,9 +19,18 @@
      <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "post" %>
      <%= link_to "バイト登録", "/works/new", class: "post" %>
      </div>
+     <% elsif student_signed_in? %>
+     <div class="user_nav grid-6">
+     <%= link_to "ログアウト", destroy_student_session_path, method: :delete, class: "post" %>
+     <%= link_to "マイページ", "/works/new", class: "post" %>
+     </div>
+     <%elsif request.path.include?("sign_in") %>
+     <div class="user_nav grid-6">
+     </div>
      <% else %>
      <div class="user_nav grid-6">
-    
+     <%= link_to "ログイン", new_student_session_path, class: "post" %>
+     <%= link_to "新規登録", new_student_registration_path, class: "post" %>
      </div>
      <% end %>
     </div>
@@ -34,7 +43,10 @@
       <p class="admin">
         成蹊大学アドミッションセンター
       </p>
+      <% if admin_signed_in? || student_signed_in? || request.path.include?("sign_in") || request.path.include?("sign_up") %>
+      <% else %>
      <%= link_to "管理者用", new_admin_session_path, class: "post" %>
+     <% end %>
     </footer>
   </body>
 </html>
