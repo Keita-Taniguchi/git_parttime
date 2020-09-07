@@ -1,12 +1,10 @@
 .wrapper {
     background-color: white;
-    height: 100%;
     overflow-x: hidden;
-}
-
-#container {
-    position: relative;
-    min-height: 100%;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 50px;
+    box-sizing: border-box;
 }
     
 .header {
@@ -48,6 +46,7 @@
      width: 100%;
      padding: 20px;
      bottom: 0;
+     position: absolute;
 }
 
 .kanri {
@@ -164,4 +163,49 @@ p.admin {
   border        : none;   
   text-decoration: none;
 }
-    
+
+.touroku {
+    width: 500px;
+    margin: 80px auto 80px auto;
+    background-color: gray;
+    padding: 20px 20px;
+}
+
+.label {
+    font-size: 20pt;
+    margin-right: 20px
+}
+
+.box{
+    height:50px;
+    width: 350px;
+    font-size: 20pt;
+}
+
+.boxx{
+     height:50px;
+    width: 400px;
+    font-size: 20pt;
+}
+
+.boxy{
+    height:200px;
+    width: 480px;
+    font-size: 20pt;
+    resize: none;
+}
+
+.postx {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  cursor        : pointer;     
+  border        : none;    
+  text-decoration: none;
+  margin-left:200px;
+}

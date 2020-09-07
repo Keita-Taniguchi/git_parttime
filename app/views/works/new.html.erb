@@ -1,0 +1,44 @@
+<div id= "main">
+ <div class = "image">
+  <div class = "albaito">
+   <p>アルバイト登録</p>
+  </div>
+ </div>
+
+<div class = "touroku">
+<%= form_for(@work) do |f| %>
+ <div style="margin: 0 auto 20px ">
+  <%= f.label :種類, class: "label"%>
+  <%= f.select :work_type, ["学校見学"], {prompt: ""}, {class: "boxx"} %>
+  </div>
+   <div style="margin: 0 auto 20px ">
+  <%= f.label :学校, class: "label"%>
+  <%= f.text_field :school, class: "boxx"  %>
+  </div>
+   <div style="margin: 0 auto 20px ">
+  <%= f.label :学年,  class: "label" %>
+  <%= f.text_field :gakunen, class: "boxx"%>
+  </div>
+  <div style="margin: 0 auto 20px ">
+  <%= f.label :見学者数, class: "label" %>
+  <%= f.number_field :ninzu, class: "box" %>
+  </div>
+  <div style="margin: 0 auto 20px ">
+  <%= f.label :募集人数, class: "label" %>
+  <%= f.number_field :teiinn, class: "box" %>
+  </div>
+  <div style="margin: 0 auto 20px ">
+  <%= f.label :開始時刻, class: "label" %>
+  <%= f.datetime_field :start, class: "box" %>
+  </div>
+  <div style="margin: 0 auto 20px ">
+  <%= f.label :終了時刻, class: "label" %>
+  <%= f.datetime_field :end, class: "box" %>
+  </div>
+   <div style="margin: 0 auto 20px ">
+   <%= f.label :備考欄, class: "label" %>
+  <%= f.text_area :bikou, class: "boxy" %>
+  </div>
+  <%= f.submit "送信", class: "postx"%>
+<% end %>
+</div>

@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :works, only: [:index]
+  devise_for :admins
+  root  'works#index'         
+  resources :works, only: [:index, :new, :create]
 end
