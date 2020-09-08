@@ -22,7 +22,7 @@
      <% elsif student_signed_in? %>
      <div class="user_nav grid-6">
      <%= link_to "ログアウト", destroy_student_session_path, method: :delete, class: "post" %>
-     <%= link_to "マイページ", "/works/new", class: "post" %>
+     <%= link_to "マイページ", "/students/#{current_student.id}", class: "post" %>
      </div>
      <%elsif request.path.include?("sign_in") %>
      <div class="user_nav grid-6">
