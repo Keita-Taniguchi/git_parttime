@@ -4,6 +4,7 @@ class WorksController < ApplicationController
     
     def index
     @works = Work.order("start DESC").page(params[:page]).per(5)
+    @reservation = Reservation.new 
     end
     
     def new

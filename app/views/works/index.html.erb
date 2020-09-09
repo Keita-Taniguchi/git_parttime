@@ -37,7 +37,12 @@
      </div>
     </div>
     <% elsif student_signed_in? %>
-     <a class="oubo" href="/tweets/new">申し込む</a>
+    <div class ="ouboxx">
+      <%= form_for(@reservation) do |f| %>
+       <%= f.hidden_field :work_id, value: work.id %>
+       <%= f.submit "申し込む", class: "oubo" %>
+      <% end %>
+      </div>
     <% else %>
     
     <% end %>
