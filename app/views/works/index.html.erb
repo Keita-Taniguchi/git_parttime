@@ -36,13 +36,21 @@
       </div> 
      </div>
     </div>
+     <% elsif student_signed_in? && work.reservations.exists?(student_id: current_student.id) %>
+    <div class ="ouboxx">
+     <div class ="oubo">
+      申込済
+     </div>
+    </div>
     <% elsif student_signed_in? %>
     <div class ="ouboxx">
-      <%= form_for(@reservation) do |f| %>
+      <%= form_for(@reservation) do |f|  %>
+       <%= f.hidden_field :work_start, value: work.start %>
        <%= f.hidden_field :work_id, value: work.id %>
        <%= f.submit "申し込む", class: "oubo" %>
       <% end %>
       </div>
+   
     <% else %>
     
     <% end %>

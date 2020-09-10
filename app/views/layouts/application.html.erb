@@ -13,9 +13,13 @@
   
   <div id="container">
    <header class="header">
+   <%= form_tag('/products/search', method: :get) do %>
+   <%= collection_select :work, :keyword, Work.all.order("start DESC"), :start, :start_date, {prompt: ""} %>
+              <% end %>
     <div class="header__bar row">
     <% if admin_signed_in? %>
      <div class="user_nav grid-6">
+     <%= link_to "応募一覧", reservations_path, class: "post" %>
      <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "post" %>
      <%= link_to "バイト登録", "/works/new", class: "post" %>
      </div>

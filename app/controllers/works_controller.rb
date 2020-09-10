@@ -31,6 +31,10 @@ class WorksController < ApplicationController
      work.update(work_params)
      redirect_to action: :index
     end 
+    
+    def search
+    @works = Work.where('start LIKE(?)', "%#{params[:keyword]}%")
+    end
       
     private
     def work_params
