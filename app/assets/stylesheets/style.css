@@ -8,10 +8,11 @@
 }
     
 .header {
+      z-index:9999;
       background-color: #003c88;
-      height: 60px;
+      height: 70px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       position: fixed;
       top: 0;
       left: 0;
@@ -19,7 +20,7 @@
 }
 
 .user_nav.grid-6 {   
-    margin: 10px 10px 10px 0;
+    margin: 15px 10px 10px 0;
 }
 
 .footer {
@@ -59,7 +60,7 @@ p.admin {
 .image {
     height: 300px;
     width: 100%;
-    background-image: url(1.jpg);
+    background-image: url(honkan.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -73,61 +74,57 @@ p.admin {
 
 .contents.row {
     width: 1100px;
-    margin: 80px auto 80px auto;
+    margin: 50px auto 80px auto;
     
 }
     
 .allrow {
     display: flex;
     justify-content: space-between;
-    background-color: gray;
+    background-color: white;
     margin-bottom:30px;
+    border: solid 3px #6091d3;
 }
     
 .content_post {
     padding: 30px 25px;
+    height :90px;
 }
 
 .icons {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .name {
-  display       : inline-block;
-  border-radius : 5%;          /* 角丸       */
-  font-size     : 15pt;        /* 文字サイズ */
+  display       : inline-block;         /* 角丸       */
+  font-size     : 12pt;        /* 文字サイズ */
   text-align    : center;      /* 文字位置   */
-  padding       : 12px 30px;   /* 余白       */
-  background    : black;     /* 背景色     */
-  color         : white;     /* 文字色     */
+  font-weight: bold;     /* 背景色     */
+  color         : black;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */   
   border        : none;    
   margin-left  :10px;
+  margin-right :10px;
 }
 
-
-
 .school {
-  display       : inline-block;
-  border-radius : 5%;          /* 角丸       */
-  font-size     : 30pt;        /* 文字サイズ */
-  text-align    : center;      /* 文字位置   */
-  padding       : 12px 30px;   /* 余白       */
-  background    : red;     /* 背景色     */
-  color         : white;     /* 文字色     */
+  display       : inline-block; 
+  font-weight :bold;/* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   *//* 余白       */ /* 背景色     */
+  color         : #6091d3;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */   
   border        : none;    
   margin-left  :10px;
+  text-decoration: underline
 }
 
 .bikou {
-  display       : inline-block;
-  border-radius : 5%;          /* 角丸       */
-  font-size     : 20pt;        /* 文字サイズ */
-  text-align    : center;      /* 文字位置   */
-  padding       : 12px 30px;   /* 余白       */
-  background    : black;     /* 背景色     */
-  color         : white;     /* 文字色     */
+  display       : inline-block;       /* 角丸       */
+  font-size     : 12pt;   
+  font-weight :bold;/* 文字サイズ */
+  text-align    : center;      /* 文字位置   */  /* 余白       */    /* 背景色     */
+  color         : black;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */   
   border        : none;  
   margin-top: 20px;
@@ -141,10 +138,43 @@ p.admin {
   line-height: 120px;
   border-radius : 5%;          /* 角丸       */
   font-size     : 20pt;        /* 文字サイズ */
-  padding: 0 10px;
   margin: auto 50px;
   text-align    : center;      /* 文字位置   */
-  background    : black;     /* 背景色     */
+  background    : #003c88;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  border        : none;   
+  text-decoration: none;
+}
+.oubo:hover {
+  opacity: 0.5;
+}
+
+.oubos{
+  display       : inline-block;
+  height: 120px;
+  width: 120px;
+  line-height: 120px;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  margin: auto 50px;
+  text-align    : center;      /* 文字位置   */
+  background    : #003c88;
+  opacity: 0.5;/* 背景色     */
+  color         : white;     /* 文字色     */
+  border        : none;   
+  text-decoration: none;
+}
+
+.oubom{
+  display       : inline-block;
+  height: 120px;
+  width: 120px;
+  line-height: 120px;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  margin: auto 50px;
+  text-align    : center;      /* 文字位置   */
+  background    : #003c88;
   color         : white;     /* 文字色     */
   border        : none;   
   text-decoration: none;
@@ -158,18 +188,21 @@ p.admin {
 
 .oubox {
   display       : inline-block;
-  height: 70px;
+  height: 50px;
   width: 120px;
-  line-height: 70px;
+  line-height: 50px;
   border-radius : 5%;          /* 角丸       */
   font-size     : 20pt;        /* 文字サイズ */
   padding: 0 10px;
   margin-right: 50px;
   text-align    : center;      /* 文字位置   */
-  background    : black;     /* 背景色     */
+  background    : #003c88;     /* 背景色     */
   color         : white;     /* 文字色     */
   border        : none;   
   text-decoration: none;
+}
+.oubox:hover {
+  opacity: 0.5;
 }
 
 .oubox.neo{
@@ -179,8 +212,11 @@ p.admin {
 .touroku {
     width: 500px;
     margin: 80px auto 80px auto;
-    background-color: gray;
+    background-color: white;
     padding: 20px 20px;
+    border: solid 3px #6091d3;
+    color         : #6091d3;   
+    font-weight: bold;
 }
 
 .touroku.next{
@@ -190,6 +226,32 @@ p.admin {
 .label {
     font-size: 20pt;
     margin-right: 20px
+}
+
+.kensaku{
+    margin: 20px 0 auto 40px;
+    height:30px;
+    width: 200px;
+    font-size: 10pt;
+}
+
+.kenbtn{
+  margin-top: 20px;
+  display       : inline-block;
+  height: 30px;
+  width: 50px;
+  line-height: 30px;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  padding: 0 10px;
+  text-align    : center;      /* 文字位置   */
+  background    : black;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  border        : none;   
+  text-decoration: none;
+}
+.kenbtn:hover {
+  opacity: 0.5;
 }
 
 .box{
@@ -225,6 +287,9 @@ p.admin {
   text-decoration: none;
   margin-right :50px;
 }
+.post:hover {
+  opacity: 0.5;
+}
 
 .postx {
   display       : inline-block;
@@ -232,13 +297,16 @@ p.admin {
   font-size     : 15pt;        /* 文字サイズ */
   text-align    : center;      /* 文字位置   */
   padding       : 12px 30px;   /* 余白       */
-  background    : black;     /* 背景色     */
+  background    : #003c88;     /* 背景色     */
   color         : white;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */
   cursor        : pointer;     
   border        : none;    
   text-decoration: none;
   margin-left:200px;
+}
+.postx:hover {
+  opacity: 0.5;
 }
 
 .postxx {
@@ -247,10 +315,17 @@ p.admin {
   font-size     : 15pt;        /* 文字サイズ */
   text-align    : center;      /* 文字位置   */
   padding       : 12px 30px;   /* 余白       */
-  background    : black;     /* 背景色     */
+  background    : #003c88;     /* 背景色     */
   color         : white;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */
   cursor        : pointer;     
   border        : none;    
   text-decoration: none;
+}
+.postxx:hover {
+  opacity: 0.5;
+}
+
+.actions {
+    margin-bottom: 10px;
 }

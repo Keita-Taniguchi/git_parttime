@@ -13,9 +13,25 @@
   
   <div id="container">
    <header class="header">
+ <%if request.path.include?("students") || request.path.include?("admin") ||  request.path.include?("new") || request.path.include?("edit")%>
+ <div>
+ </div>
+ <% elsif request.path.include?("reservation") %>
+ <div>
+   <%= form_tag('/reservations/search', method: :get) do %>
+   <%= collection_select :reservation, :work_start, Reservation.all.order("work_start DESC"), :work_start, :work_start_date, {prompt: ""}, {class: "kensaku"} %>
+   <input type="submit" value="検索" class="kenbtn">
+  <% end %>
+  </div>
+ <% else %>
+   <div>
    <%= form_tag('/works/search', method: :get) do %>
-   <%= collection_select :work, :keyword, Work.all.order("start DESC"), :start, :start_date, {prompt: ""} %>
-   <input type="submit" value="SEND">
+   <%= collection_select :work, :start, Work.all.order("start DESC"), :start, :start_date, {prompt: ""}, {class: "kensaku"} %>
+   <input type="submit" value="検索" class="kenbtn">
+  <% end %>
+  </div>
+  
+  
   <% end %>
     <div class="header__bar row">
     <% if admin_signed_in? %>

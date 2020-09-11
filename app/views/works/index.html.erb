@@ -10,18 +10,20 @@
   <div class = "allrow"> 
     <div class="content_post">
      <div class="icons">
-      <span class="name"><%= work.work_type %></span>
-      <span class="name"><%= I18n.l(work.start, format: :full_date) %> ~ <%= work.end.strftime("%H時%M分") %></span>
+      <span class="name">業務タイプ：<%= work.work_type %></span>
+      <span class="name">日程：<%= I18n.l(work.start, format: :full_date) %> ~ <%= work.end.strftime("%H時%M分") %></span>
       <% if work.teiinn %>
        <span class="name">定員<%= work.teiinn %>名</span>
       <% end %>
      </div>
      <div class="kyaku">
+     <% if work.gakunen.present? %>
       <span class="school"><%= work.school %> <%= work.gakunen %>年生 <%=work.ninzu %>名</span>
+    <% end %>
      </div>
      <% if work.bikou.present? %>
      <div>
-       <p class="bikou"><%= work.bikou %></p>
+       <p class="bikou">条件：<%= work.bikou %></p>
      </div>
      <% end %>
     </div>
@@ -38,9 +40,9 @@
     </div>
      <% elsif student_signed_in? && work.reservations.exists?(student_id: current_student.id) %>
     <div class ="ouboxx">
-     <div class ="oubo">
+     <span class ="oubos">
       申込済
-     </div>
+     </span>
     </div>
     <% elsif student_signed_in? %>
     <div class ="ouboxx">

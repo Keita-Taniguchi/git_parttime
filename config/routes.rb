@@ -7,6 +7,10 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :reservations, only: [:index, :new, :create,:update, :destroy]
+  resources :reservations, only: [:index, :new, :create,:update, :destroy] do
+   collection do
+       get 'search'
+   end
+   end
   resources :students, only: [:show]
 end
