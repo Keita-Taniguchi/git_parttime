@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
     
-    before_action :move_to_index, except: :index
+    before_action :move_to_index, except: [:index, :search]
     
     def index
     @works = Work.order("start DESC").page(params[:page]).per(5)
@@ -33,7 +33,8 @@ class WorksController < ApplicationController
     end 
     
     def search
-    @works = Work.where('start LIKE(?)', "%#{params[:keyword]}%")
+    @works = Work.where(start: "#{params[:work]}")
+    @reservation = Reservation.new 
     end
       
     private

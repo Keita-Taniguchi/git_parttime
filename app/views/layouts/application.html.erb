@@ -13,9 +13,10 @@
   
   <div id="container">
    <header class="header">
-   <%= form_tag('/products/search', method: :get) do %>
+   <%= form_tag('/works/search', method: :get) do %>
    <%= collection_select :work, :keyword, Work.all.order("start DESC"), :start, :start_date, {prompt: ""} %>
-              <% end %>
+   <input type="submit" value="SEND">
+  <% end %>
     <div class="header__bar row">
     <% if admin_signed_in? %>
      <div class="user_nav grid-6">
