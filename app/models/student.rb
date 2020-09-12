@@ -5,4 +5,7 @@ class Student < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :reservations
   has_many :works, through: :reservations
+  
+  validates :name, presence: true
+  validates :number, presence: true,uniqueness: true
 end

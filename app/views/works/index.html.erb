@@ -14,6 +14,9 @@
       <span class="name">日程：<%= I18n.l(work.start, format: :full_date) %> ~ <%= work.end.strftime("%H時%M分") %></span>
       <% if work.teiinn %>
        <span class="name">定員<%= work.teiinn %>名</span>
+        <%if admin_signed_in? %>
+          <span class="name">現申込数 <%= work.reservations.count %>名</span>
+        <% end %> 
       <% end %>
      </div>
      <div class="kyaku">
