@@ -34,7 +34,7 @@
     <div class="ouboxx">
      <div>
       <div>
-      <%= link_to '削除', "/works/#{work.id}", method: :delete, class: "oubox" %>
+      <%= link_to '削除', "/works/#{work.id}", method: :delete, remote: true, class: "oubox" %>
       </div>
       <div>
       <%= link_to '編集', "/works/#{work.id}/edit", method: :get, class: "oubox neo" %>
@@ -49,7 +49,7 @@
     </div>
     <% elsif student_signed_in? %>
     <div class ="ouboxx">
-      <%= form_for(@reservation) do |f|  %>
+      <%= form_for @reservation, remote: true do |f|  %>
        <%= f.hidden_field :work_start, value: work.start %>
        <%= f.hidden_field :work_id, value: work.id %>
        <%= f.submit "申し込む", class: "oubo" %>

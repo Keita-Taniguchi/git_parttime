@@ -329,3 +329,45 @@ p.admin {
 .actions {
     margin-bottom: 10px;
 }
+
+.contents.grids {
+    width: 900px;
+    margin: 50px auto 80px auto;
+}
+
+.allgrid{
+  font-size: 0;
+}
+
+.grid{
+    display       : inline-block;
+    text-align    : center;    
+    line-height  : 60px;
+    height:60px;
+    width: 290px;
+    font-size: 20pt;
+    border: solid  #6091d3;
+    vertical-align: bottom; 
+}
+
+.delete {
+  display       : inline-block;
+  height: 50px;
+  width: 120px;
+  line-height: 50px;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  padding: 0 10px;
+  text-align    : center;      /* 文字位置   */
+  background    : #003c88;     /* 背景色     */
+  color         : white;     /* 文字色     */
+  border        : none;   
+  text-decoration: none;
+}
+.delete:hover {
+  opacity: 0.5;
+}
+
+.modoru{
+  margin-top:10px;
+}

@@ -8,7 +8,7 @@
  </div>
 
 <div class = "touroku">
-<%= form_for(@work) do |f| %>
+<%= form_for @work, remote: true do |f| %>
  <div style="margin: 0 auto 20px ">
   <%= f.label :種類, class: "label"%>
   <%= f.select :work_type, ["学校見学"], {prompt: ""}, {class: "boxx"} %>

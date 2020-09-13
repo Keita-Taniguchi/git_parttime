@@ -1,5 +1,5 @@
 class Work < ApplicationRecord
-  has_many :reservations
+  has_many :reservations, :dependent => :destroy
   has_many :students, through: :reservations
   
   def start_date

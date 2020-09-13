@@ -13,9 +13,16 @@
   
   <div id="container">
    <header class="header">
- <%if request.path.include?("students") || request.path.include?("admin") ||  request.path.include?("new") || request.path.include?("edit")%>
+ <%if request.path.include?("sign_in") || request.path.include?("sign_up")|| request.path.include?("admin") ||  request.path.include?("new") || request.path.include?("edit")%>
  <div>
  </div>
+ <%elsif request.path.include?("students") && admin_signed_in? %>
+ <div>
+    <%= form_tag('/students/search', method: :get) do %>
+    <input class="kensaku" name="student" placeholder="学籍番号で検索" type="text" value=""></input>
+    <input type="submit" value="検索" class="kenbtn">
+  <% end %>
+  </div>
  <% elsif request.path.include?("reservation") %>
  <div>
    <%= form_tag('/reservations/search', method: :get) do %>
@@ -36,6 +43,7 @@
     <div class="header__bar row">
     <% if admin_signed_in? %>
      <div class="user_nav grid-6">
+     <%= link_to "登録者一覧", students_path, class: "post" %>
      <%= link_to "応募一覧", reservations_path, class: "post" %>
      <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "post" %>
      <%= link_to "バイト登録", "/works/new", class: "post" %>
