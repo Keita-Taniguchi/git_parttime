@@ -6,61 +6,7 @@
  </div>
  
 <div class="contents row" >
-  <% @works.each do |work| %>
-  <div class = "allrow"> 
-    <div class="content_post">
-     <div class="icons">
-      <span class="name">業務タイプ：<%= work.work_type %></span>
-      <span class="name">日程：<%= I18n.l(work.start, format: :full_date) %> ~ <%= work.end.strftime("%H時%M分") %></span>
-      <% if work.teiinn %>
-       <span class="name">定員<%= work.teiinn %>名</span>
-        <%if admin_signed_in? %>
-          <span class="name">現申込数 <%= work.reservations.count %>名</span>
-        <% end %> 
-      <% end %>
-     </div>
-     <div class="kyaku">
-     <% if work.gakunen.present? %>
-      <span class="school"><%= work.school %> <%= work.gakunen %>年生 <%=work.ninzu %>名</span>
-    <% end %>
-     </div>
-     <% if work.bikou.present? %>
-     <div>
-       <p class="bikou">条件：<%= work.bikou %></p>
-     </div>
-     <% end %>
-    </div>
-    <% if admin_signed_in? %>
-    <div class="ouboxx">
-     <div>
-      <div>
-      <%= link_to '削除', "/works/#{work.id}", method: :delete, remote: true, class: "oubox" %>
-      </div>
-      <div>
-      <%= link_to '編集', "/works/#{work.id}/edit", method: :get, class: "oubox neo" %>
-      </div> 
-     </div>
-    </div>
-     <% elsif student_signed_in? && work.reservations.exists?(student_id: current_student.id) %>
-    <div class ="ouboxx">
-     <span class ="oubos">
-      申込済
-     </span>
-    </div>
-    <% elsif student_signed_in? %>
-    <div class ="ouboxx">
-      <%= form_for @reservation, remote: true do |f|  %>
-       <%= f.hidden_field :work_start, value: work.start %>
-       <%= f.hidden_field :work_id, value: work.id %>
-       <%= f.submit "申し込む", class: "oubo" %>
-      <% end %>
-      </div>
-   
-    <% else %>
-    
-    <% end %>
-   </div>
-   <% end %>
+   <%= render @works %>
    <%= paginate(@works) %>
 </div>
 </div>

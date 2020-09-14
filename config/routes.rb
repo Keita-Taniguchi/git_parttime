@@ -12,7 +12,7 @@ Rails.application.routes.draw do
        get 'search'
    end
    end
-  resources :students, only: [:index, :show, :destroy] do
+  resources :students, only: [:index,  :show, :destroy] do
       collection do
           get 'search'
       end 

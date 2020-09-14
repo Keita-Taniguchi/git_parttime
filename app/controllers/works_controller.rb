@@ -19,7 +19,7 @@ class WorksController < ApplicationController
     def destroy
     work = Work.find(params[:id])
     work.destroy
-    redirect_to action: :index
+    @works = Work.order("start DESC").page(params[:page]).per(5)
     end
     
     def edit
